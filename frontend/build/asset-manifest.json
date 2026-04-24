@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/sagar-jeweller-website/static/css/main.896ce6c0.css",
-    "main.js": "/sagar-jeweller-website/static/js/main.cb8ab4c0.js",
-    "index.html": "/sagar-jeweller-website/index.html",
-    "main.896ce6c0.css.map": "/sagar-jeweller-website/static/css/main.896ce6c0.css.map",
-    "main.cb8ab4c0.js.map": "/sagar-jeweller-website/static/js/main.cb8ab4c0.js.map"
+    "main.css": "/static/css/main.896ce6c0.css",
+    "main.js": "/static/js/main.cb8ab4c0.js",
+    "index.html": "/index.html",
+    "main.896ce6c0.css.map": "/static/css/main.896ce6c0.css.map",
+    "main.cb8ab4c0.js.map": "/static/js/main.cb8ab4c0.js.map"
   },
   "entrypoints": [
     "static/css/main.896ce6c0.css",
