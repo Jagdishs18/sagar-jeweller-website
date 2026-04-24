@@ -128,36 +128,17 @@ function HomePage() {
         </Button>
       ))}
       
-      {/* Android and Apple App Store Icons after ABOUT US - Using React Icons */}
+      {/* App Store Icons on Desktop */}
       <Box sx={{ display: 'flex', gap: 1.5, ml: 2 }}>
-        {/* Android / Google Play Store Link */}
         <IconButton
           onClick={() => window.open('https://play.google.com/store/apps/details?id=com.asterix.sagar', '_blank')}
-          sx={{ 
-            p: 0.5,
-            color: '#fff',
-            '&:hover': { 
-              color: '#d4af37',
-              transform: 'scale(1.1)',
-              transition: 'transform 0.2s ease'
-            }
-          }}
+          sx={{ p: 0.5, color: '#fff', '&:hover': { color: '#d4af37', transform: 'scale(1.1)' } }}
         >
           <AndroidIcon sx={{ fontSize: '28px' }} />
         </IconButton>
-
-        {/* Apple / App Store Link */}
         <IconButton
           onClick={() => window.open('https://apps.apple.com/us/app/sagar-jewellers/id6760704954', '_blank')}
-          sx={{ 
-            p: 0.5,
-            color: '#fff',
-            '&:hover': { 
-              color: '#d4af37',
-              transform: 'scale(1.1)',
-              transition: 'transform 0.2s ease'
-            }
-          }}
+          sx={{ p: 0.5, color: '#fff', '&:hover': { color: '#d4af37', transform: 'scale(1.1)' } }}
         >
           <AppleIcon sx={{ fontSize: '28px' }} />
         </IconButton>
@@ -214,12 +195,30 @@ function HomePage() {
       ))}
     </Box>
 
-    {/* Empty div for mobile balance */}
-    <Box sx={{ width: 40, display: { xs: 'block', md: 'none' } }} />
+    {/* Mobile App Icons - Now visible on mobile */}
+    <Box sx={{ 
+      display: { xs: 'flex', md: 'none' }, 
+      gap: 1,
+      alignItems: 'center'
+    }}>
+      <IconButton
+        onClick={() => window.open('https://play.google.com/store/apps/details?id=com.asterix.sagar', '_blank')}
+        sx={{ p: 0.5, color: '#fff', '&:hover': { color: '#d4af37' } }}
+      >
+        <AndroidIcon sx={{ fontSize: '24px' }} />
+      </IconButton>
+      <IconButton
+        onClick={() => window.open('https://apps.apple.com/us/app/sagar-jewellers/id6760704954', '_blank')}
+        sx={{ p: 0.5, color: '#fff', '&:hover': { color: '#d4af37' } }}
+      >
+        <AppleIcon sx={{ fontSize: '24px' }} />
+      </IconButton>
+    </Box>
   </Toolbar>
 </AppBar>
 
       {/* Mobile Drawer */}
+{/* Mobile Drawer */}
 <Drawer anchor="left" open={mobileOpen} onClose={() => setMobileOpen(false)}>
   <Box sx={{ width: 280, p: 2, bgcolor: '#4d0e2e', height: '100%' }}>
     <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 3 }}>
@@ -228,205 +227,214 @@ function HomePage() {
       </IconButton>
     </Box>
     <Box sx={{ textAlign: 'center', mb: 4, cursor: 'pointer' }} onClick={() => { window.location.href = '/'; setMobileOpen(false); }}>
-      <Typography 
-        variant="h6" 
-        sx={{ 
-          fontFamily: 'Playfair Display, serif',
-          fontWeight: 700,
-          color: '#d4af37',
-          letterSpacing: '1px'
-        }}
-      >
+      <Typography variant="h6" sx={{ fontFamily: 'Playfair Display, serif', fontWeight: 700, color: '#d4af37', letterSpacing: '1px' }}>
         SAGAR JEWELLERS
       </Typography>
     </Box>
     <Divider sx={{ bgcolor: '#7a2a4a' }} />
     <List>
       <ListItem button onClick={() => { window.location.href = '/'; setMobileOpen(false); }}>
-        <ListItemText 
-          primary="HOME" 
-          primaryTypographyProps={{ 
-            sx: { textAlign: 'center', fontWeight: 500, color: '#fff', '&:hover': { color: '#d4af37' } }
-          }} 
-        />
+        <ListItemText primary="HOME" primaryTypographyProps={{ sx: { textAlign: 'center', color: '#fff', '&:hover': { color: '#d4af37' } } }} />
       </ListItem>
       <ListItem button onClick={() => { window.location.href = '/about'; setMobileOpen(false); }}>
-        <ListItemText 
-          primary="ABOUT" 
-          primaryTypographyProps={{ 
-            sx: { textAlign: 'center', fontWeight: 500, color: '#fff', '&:hover': { color: '#d4af37' } }
-          }} 
-        />
+        <ListItemText primary="ABOUT" primaryTypographyProps={{ sx: { textAlign: 'center', color: '#fff', '&:hover': { color: '#d4af37' } } }} />
       </ListItem>
       <ListItem button onClick={() => { window.location.href = '/collections'; setMobileOpen(false); }}>
-        <ListItemText 
-          primary="COLLECTIONS" 
-          primaryTypographyProps={{ 
-            sx: { textAlign: 'center', fontWeight: 500, color: '#fff', '&:hover': { color: '#d4af37' } }
-          }} 
-        />
+        <ListItemText primary="COLLECTIONS" primaryTypographyProps={{ sx: { textAlign: 'center', color: '#fff', '&:hover': { color: '#d4af37' } } }} />
       </ListItem>
       <ListItem button onClick={() => { window.location.href = '/contact'; setMobileOpen(false); }}>
-        <ListItemText 
-          primary="CONTACT US" 
-          primaryTypographyProps={{ 
-            sx: { textAlign: 'center', fontWeight: 500, color: '#fff', '&:hover': { color: '#d4af37' } }
-          }} 
-        />
+        <ListItemText primary="CONTACT US" primaryTypographyProps={{ sx: { textAlign: 'center', color: '#fff', '&:hover': { color: '#d4af37' } } }} />
       </ListItem>
     </List>
+    
+    {/* App Store Icons in Mobile Drawer */}
+    <Divider sx={{ my: 2, bgcolor: '#7a2a4a' }} />
+    <Box sx={{ display: 'flex', justifyContent: 'center', gap: 3, mt: 2 }}>
+      <IconButton
+        onClick={() => window.open('https://play.google.com/store/apps/details?id=com.asterix.sagar', '_blank')}
+        sx={{ color: '#fff', '&:hover': { color: '#d4af37' } }}
+      >
+        <AndroidIcon sx={{ fontSize: '32px' }} />
+      </IconButton>
+      <IconButton
+        onClick={() => window.open('https://apps.apple.com/us/app/sagar-jewellers/id6760704954', '_blank')}
+        sx={{ color: '#fff', '&:hover': { color: '#d4af37' } }}
+      >
+        <AppleIcon sx={{ fontSize: '32px' }} />
+      </IconButton>
+    </Box>
+    <Typography variant="caption" align="center" sx={{ display: 'block', color: '#999', mt: 2 }}>
+      Download our App
+    </Typography>
   </Box>
 </Drawer>
 
       {/* Hero Section with Background Image Slider */}
-      <Box 
+    {/* Hero Section with Background Image Slider */}
+<Box 
+  sx={{ 
+    height: { xs: '100vh', md: '100vh' },
+    position: 'relative',
+    overflow: 'hidden'
+  }}
+>
+  {/* Background Image Slider */}
+  {slides.map((slide, index) => (
+    <Box
+      key={slide.id}
+      sx={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundImage: `url(${slide.image})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        opacity: currentSlide === index ? 1 : 0,
+        transition: 'opacity 1s ease-in-out',
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.4)',
+        }
+      }}
+    />
+  ))}
+
+  {/* Content Container */}
+  <Container 
+    maxWidth="lg" 
+    sx={{ 
+      position: 'relative',
+      height: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      zIndex: 10
+    }}
+  >
+    <Box sx={{ 
+      textAlign: 'center', 
+      maxWidth: '900px', 
+      mx: 'auto',
+      width: '100%'
+    }}>
+      <Typography 
+        variant="h1" 
         sx={{ 
-          height: { xs: '100vh', md: '100vh' },
-          position: 'relative',
-          overflow: 'hidden'
+          fontFamily: 'Playfair Display, serif',
+          fontWeight: 700,
+          fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4.8rem' },
+          lineHeight: 1.2,
+          color: '#fff',
+          mb: 3,
+          letterSpacing: '-0.5px',
+          textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
         }}
       >
-        {/* Background Image Slider */}
-        {slides.map((slide, index) => (
+        {slides[currentSlide].title}
+      </Typography>
+      <Typography 
+        variant="h6" 
+        sx={{ 
+          fontFamily: 'Playfair Display, serif',
+          fontSize: { xs: '1rem', sm: '1.2rem', md: '1.4rem' },
+          color: '#fff',
+          fontWeight: 400,
+          fontStyle: 'italic',
+          textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
+        }}
+      >
+        {slides[currentSlide].subtitle}
+      </Typography>
+
+      {/* Navigation Arrows - Simple Symbols (No import needed) */}
+      <Box sx={{ 
+        position: 'absolute',
+        bottom: { xs: 20, md: '50%' },
+        left: 0,
+        right: 0,
+        display: 'flex',
+        justifyContent: 'space-between',
+        transform: { md: 'translateY(50%)' },
+        pointerEvents: 'none',
+        px: { xs: 1, sm: 2, md: 4 }
+      }}>
+        <IconButton 
+          onClick={prevSlide}
+          sx={{ 
+            bgcolor: 'rgba(255,255,255,0.2)',
+            backdropFilter: 'blur(5px)',
+            color: '#fff',
+            width: { xs: 36, md: 48 },
+            height: { xs: 36, md: 48 },
+            '&:hover': { 
+              bgcolor: '#d4af37',
+              transform: 'scale(1.1)'
+            },
+            pointerEvents: 'auto',
+            transition: 'all 0.3s ease'
+          }}
+        >
+          <Typography sx={{ fontSize: { xs: 18, md: 24 }, lineHeight: 1 }}>◀</Typography>
+        </IconButton>
+        <IconButton 
+          onClick={nextSlide}
+          sx={{ 
+            bgcolor: 'rgba(255,255,255,0.2)',
+            backdropFilter: 'blur(5px)',
+            color: '#fff',
+            width: { xs: 36, md: 48 },
+            height: { xs: 36, md: 48 },
+            '&:hover': { 
+              bgcolor: '#d4af37',
+              transform: 'scale(1.1)'
+            },
+            pointerEvents: 'auto',
+            transition: 'all 0.3s ease'
+          }}
+        >
+          <Typography sx={{ fontSize: { xs: 18, md: 24 }, lineHeight: 1 }}>▶</Typography>
+        </IconButton>
+      </Box>
+
+      {/* Dots Indicator */}
+      <Box sx={{ 
+        position: 'absolute',
+        bottom: { xs: 20, md: 30 },
+        left: 0,
+        right: 0,
+        display: 'flex',
+        justifyContent: 'center',
+        gap: { xs: 1.5, md: 2 }
+      }}>
+        {slides.map((_, index) => (
           <Box
-            key={slide.id}
+            key={index}
+            onClick={() => goToSlide(index)}
             sx={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundImage: `url(${slide.image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              opacity: currentSlide === index ? 1 : 0,
-              transition: 'opacity 1s ease-in-out',
-              '&::before': {
-                content: '""',
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                backgroundColor: 'rgba(0, 0, 0, 0.4)',
+              width: currentSlide === index ? { xs: 30, md: 40 } : { xs: 8, md: 10 },
+              height: { xs: 8, md: 10 },
+              borderRadius: '20px',
+              bgcolor: currentSlide === index ? '#d4af37' : 'rgba(255,255,255,0.5)',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                bgcolor: '#d4af37',
+                transform: 'scale(1.2)'
               }
             }}
           />
         ))}
-
-        {/* Content Container */}
-        <Container 
-          maxWidth="lg" 
-          sx={{ 
-            position: 'relative',
-            height: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            zIndex: 10
-          }}
-        >
-          <Box sx={{ 
-            textAlign: 'center', 
-            maxWidth: '900px', 
-            mx: 'auto',
-            width: '100%'
-          }}>
-            <Typography 
-              variant="h1" 
-              sx={{ 
-                fontFamily: 'Playfair Display, serif',
-                fontWeight: 700,
-                fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4.8rem' },
-                lineHeight: 1.2,
-                color: '#fff',
-                mb: 3,
-                letterSpacing: '-0.5px',
-                textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
-              }}
-            >
-              {slides[currentSlide].title}
-            </Typography>
-            <Typography 
-              variant="h6" 
-              sx={{ 
-                fontFamily: 'Playfair Display, serif',
-                fontSize: { xs: '1rem', sm: '1.2rem', md: '1.4rem' },
-                color: '#fff',
-                fontWeight: 400,
-                fontStyle: 'italic',
-                textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
-              }}
-            >
-              {slides[currentSlide].subtitle}
-            </Typography>
-
-            {/* Navigation Arrows */}
-            <Box sx={{ 
-              position: 'absolute',
-              bottom: '50%',
-              left: 20,
-              right: 20,
-              display: 'flex',
-              justifyContent: 'space-between',
-              transform: 'translateY(50%)',
-              pointerEvents: 'none'
-            }}>
-              <IconButton 
-                onClick={prevSlide}
-                sx={{ 
-                  bgcolor: 'rgba(255,255,255,0.3)',
-                  color: '#fff',
-                  '&:hover': { bgcolor: 'rgba(255,255,255,0.5)' },
-                  pointerEvents: 'auto'
-                }}
-              >
-                ◀
-              </IconButton>
-              <IconButton 
-                onClick={nextSlide}
-                sx={{ 
-                  bgcolor: 'rgba(255,255,255,0.3)',
-                  color: '#fff',
-                  '&:hover': { bgcolor: 'rgba(255,255,255,0.5)' },
-                  pointerEvents: 'auto'
-                }}
-              >
-                ▶
-              </IconButton>
-            </Box>
-
-            {/* Dots Indicator */}
-            <Box sx={{ 
-              position: 'absolute',
-              bottom: 40,
-              left: 0,
-              right: 0,
-              display: 'flex',
-              justifyContent: 'center',
-              gap: 2
-            }}>
-              {slides.map((_, index) => (
-                <Box
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  sx={{
-                    width: currentSlide === index ? 40 : 10,
-                    height: 10,
-                    borderRadius: '5px',
-                    bgcolor: currentSlide === index ? '#d4af37' : 'rgba(255,255,255,0.5)',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s ease',
-                    '&:hover': {
-                      bgcolor: '#d4af37'
-                    }
-                  }}
-                />
-              ))}
-            </Box>
-          </Box>
-        </Container>
       </Box>
+    </Box>
+  </Container>
+</Box>
 
       {/* Spacing for fixed header - not needed as hero is full screen */}
       <Toolbar sx={{ display: 'none' }} />
