@@ -570,161 +570,170 @@ function AboutUs() {
 
       {/* Footer - Same as Homepage */}
      {/* Footer */}
-<Box sx={{ bgcolor: '#580f32', color: '#fff', py: 6 }}>
-  <Container maxWidth="lg">
-    <Grid container spacing={4}>
-      
-      {/* Column 1 - Logo and Brand */}
-      <Grid item xs={12} sm={6} md={3}>
-        <Box 
-          component="img"
-          src="/images/logo.png"
-          alt="SAGAR JEWELLER"
-          sx={{ 
-            maxWidth: '200px',
-            height: 'auto',
-            mb: 2,
-            mt: 10,
-            mr: 5,
-            cursor: 'pointer'
-          }}
-          onClick={() => window.location.href = '/'}
-        />
-      </Grid>
-      
-      {/* Column 2 - QUICK LINKS */}
-      <Grid item xs={12} sm={6} md={3}>
-        {/* Heading with Gold Color */}
-        <Typography 
-          variant="h6" 
-          sx={{ 
-            fontWeight: 600, 
-            mb: 1, 
-            fontSize: '1rem', 
-            color: '#d4af37',  // Changed to gold
-            letterSpacing: '1px'
-          }}
-        >
-          QUICK LINKS
-        </Typography>
-        
-        {/* Line Image below heading */}
-        <Box
-          component="img"
-          src="/images/line.webp"
-          alt="line"
-          sx={{
-            width: '50px',
-            height: 'auto',
-            mb: 2,
-            display: 'block'
-          }}
-        />
-        
-        {/* Links with Diamond Color */}
-        <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 2, fontSize: '0.8rem' }}>
-          <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/'}>Home</Box><br />
-          <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/about'}>About Us</Box><br />
-          <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/collections'}>Collections</Box><br />
-          <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/contact'}>Contact Us</Box><br />
-        </Typography>
-      </Grid>
-      
-      {/* Column 3 - OUR POLICIES */}
-      <Grid item xs={12} sm={6} md={3}>
-        {/* Heading with Gold Color */}
-        <Typography 
-          variant="h6" 
-          sx={{ 
-            fontWeight: 600, 
-            mb: 1, 
-            fontSize: '1rem', 
-            color: '#d4af37',  // Changed to gold
-            letterSpacing: '1px'
-          }}
-        >
-          OUR POLICIES
-        </Typography>
-        
-        {/* Line Image below heading */}
-        <Box
-          component="img"
-          src="/images/line.webp"
-          alt="line"
-          sx={{
-            width: '50px',
-            height: 'auto',
-            mb: 2,
-            display: 'block'
-          }}
-        />
-        
-        {/* Links with Diamond Color */}
-        <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 2, fontSize: '0.8rem' }}>
-          <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/terms'}>Terms and Conditions</Box><br />
-          <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/privacy'}>Privacy Policy</Box><br />
-          <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/disclaimer'}>Disclaimer</Box><br />
-          <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/refund'}>Refund Policy</Box><br />
-          <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/shipping'}>Shipping and Delivery Policy</Box><br />
-          <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/cancellation'}>Cancellation and Return Policy</Box>
-        </Typography>
-      </Grid>
-      
-      {/* Column 4 - REACH US */}
-      <Grid item xs={12} sm={6} md={3}>
-        {/* Heading with Gold Color */}
-        <Typography 
-          variant="h6" 
-          sx={{ 
-            fontWeight: 600, 
-            mb: 1, 
-            fontSize: '1rem', 
-            color: '#d4af37',  // Changed to gold
-            letterSpacing: '1px'
-          }}
-        >
-          REACH US
-        </Typography>
-        
-        {/* Line Image below heading */}
-        <Box
-          component="img"
-          src="/images/line.webp"
-          alt="line"
-          sx={{
-            width: '50px',
-            height: 'auto',
-            mb: 2,
-            display: 'block'
-          }}
-        />
-        
-        {/* Text with Diamond Color */}
-        <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 1.8, fontSize: '0.8rem', mb: 2 }}>
-          Diamond Talkies Road, Opp. PCR Complex,<br />
-          Chintamani - 563 125, Karnataka, India.
-        </Typography>
-        <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 1.8, fontSize: '0.8rem', mb: 1 }}>
-          <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = 'tel:+918154252379'}>
-            +91 81542 52379, 99454 30961.
-          </Box>
-        </Typography>
-        <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 1.8, fontSize: '0.8rem' }}>
-          <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = 'mailto:namasrinivasajewellers@gmail.com'}>
-            namasrinivasajewellers@gmail.com
-          </Box>
-        </Typography>
-      </Grid>
-    </Grid>
-    
-    <Divider sx={{ my: 4, bgcolor: '#7a2a4a' }} />
-    
-    {/* Copyright */}
-    <Typography variant="body2" align="center" sx={{ color: '#ccc', fontSize: '0.75rem' }}>
-      © 2026 Sagar Jeweller. All rights reserved.
-    </Typography>
-  </Container>
-</Box>
+     <Box sx={{ bgcolor: '#580f32', color: '#fff', py: 6 }}>
+       <Container maxWidth="lg">
+         <Grid container spacing={4}>
+           
+           {/* Column 1 - Logo and Brand */}
+           <Grid item xs={12} sm={6} md={3}>
+             <Box 
+               component="img"
+               src="/images/logo.png"
+               alt="SAGAR JEWELLER"
+               sx={{ 
+                 maxWidth: '200px',
+                 height: 'auto',
+                 mb: 2,
+                 mt: 10,
+                 mr: 5,
+                 cursor: 'pointer'
+               }}
+               onClick={() => window.location.href = '/'}
+             />
+           </Grid>
+           
+           {/* Column 2 - QUICK LINKS */}
+           <Grid item xs={12} sm={6} md={3}>
+             <Typography 
+               variant="h6" 
+               sx={{ 
+                 fontWeight: 600, 
+                 mb: 1, 
+                 fontSize: '1rem', 
+                 color: '#d4af37',
+                 letterSpacing: '1px'
+               }}
+             >
+               QUICK LINKS
+             </Typography>
+             
+             <Box
+               component="img"
+               src="/images/line.webp"
+               alt="line"
+               sx={{
+                 width: '50px',
+                 height: 'auto',
+                 mb: 2,
+                 display: 'block'
+               }}
+             />
+             
+             <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 2, fontSize: '0.8rem' }}>
+               <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/'}>Home</Box><br />
+               <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/about'}>About Us</Box><br />
+               <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/collections'}>Collections</Box><br />
+               <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/contact'}>Contact Us</Box><br />
+             </Typography>
+           </Grid>
+           
+           {/* Column 3 - OUR POLICIES */}
+           <Grid item xs={12} sm={6} md={3}>
+             <Typography 
+               variant="h6" 
+               sx={{ 
+                 fontWeight: 600, 
+                 mb: 1, 
+                 fontSize: '1rem', 
+                 color: '#d4af37',
+                 letterSpacing: '1px'
+               }}
+             >
+               OUR POLICIES
+             </Typography>
+             
+             <Box
+               component="img"
+               src="/images/line.webp"
+               alt="line"
+               sx={{
+                 width: '50px',
+                 height: 'auto',
+                 mb: 2,
+                 display: 'block'
+               }}
+             />
+             
+             <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 2, fontSize: '0.8rem' }}>
+               <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/terms'}>Terms and Conditions</Box><br />
+               <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/privacy'}>Privacy Policy</Box><br />
+               <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/disclaimer'}>Disclaimer</Box><br />
+               <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/refund'}>Refund Policy</Box><br />
+               <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/shipping'}>Shipping and Delivery Policy</Box><br />
+               <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/cancellation'}>Cancellation and Return Policy</Box>
+             </Typography>
+           </Grid>
+           
+           {/* Column 4 - REACH US - Updated Information */}
+           <Grid item xs={12} sm={6} md={3}>
+             <Typography 
+               variant="h6" 
+               sx={{ 
+                 fontWeight: 600, 
+                 mb: 1, 
+                 fontSize: '1rem', 
+                 color: '#d4af37',
+                 letterSpacing: '1px'
+               }}
+             >
+               REACH US
+             </Typography>
+             
+             <Box
+               component="img"
+               src="/images/line.webp"
+               alt="line"
+               sx={{
+                 width: '50px',
+                 height: 'auto',
+                 mb: 2,
+                 display: 'block'
+               }}
+             />
+             
+             {/* Address */}
+             <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 1.8, fontSize: '0.8rem', mb: 2 }}>
+               📍 71, 12th Cross Rd, 2nd Stage,<br />
+               Mahalakshmi Layout,<br />
+               Bengaluru, Karnataka – 560086
+             </Typography>
+             
+             {/* Phone */}
+             <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 1.8, fontSize: '0.8rem', mb: 1 }}>
+               📞 <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = 'tel:+918277181308'}>
+                 +91 8277181308
+               </Box><br />
+               📞 <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = 'tel:+917090850000'}>
+                 +91 7090850000
+               </Box>
+             </Typography>
+             
+             {/* Email */}
+             <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 1.8, fontSize: '0.8rem', mb: 1 }}>
+               📧 <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = 'mailto:sales@sagarjewels.in'}>
+                 sales@sagarjewels.in
+               </Box>
+             </Typography>
+             
+             {/* Website */}
+             <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 1.8, fontSize: '0.8rem', mb: 1 }}>
+               🌐 <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.open('https://sagarjewels.in', '_blank')}>
+                 sagarjewels.in
+               </Box>
+             </Typography>
+             
+           
+           </Grid>
+         </Grid>
+         
+         <Divider sx={{ my: 4, bgcolor: '#7a2a4a' }} />
+         
+         {/* Copyright */}
+         <Typography variant="body2" align="center" sx={{ color: '#ccc', fontSize: '0.75rem' }}>
+           © 2026 Sagar Jeweller. All rights reserved.
+         </Typography>
+       </Container>
+     </Box>
     </Box>
   );
 }

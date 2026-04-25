@@ -421,7 +421,6 @@ function ContactUs() {
       </Box>
 
       {/* Footer */}
-     {/* Footer */}
 <Box sx={{ bgcolor: '#580f32', color: '#fff', py: 6 }}>
   <Container maxWidth="lg">
     <Grid container spacing={4}>
@@ -446,21 +445,19 @@ function ContactUs() {
       
       {/* Column 2 - QUICK LINKS */}
       <Grid item xs={12} sm={6} md={3}>
-        {/* Heading with Gold Color */}
         <Typography 
           variant="h6" 
           sx={{ 
             fontWeight: 600, 
             mb: 1, 
             fontSize: '1rem', 
-            color: '#d4af37',  // Changed to gold
+            color: '#d4af37',
             letterSpacing: '1px'
           }}
         >
           QUICK LINKS
         </Typography>
         
-        {/* Line Image below heading */}
         <Box
           component="img"
           src="/images/line.webp"
@@ -473,7 +470,6 @@ function ContactUs() {
           }}
         />
         
-        {/* Links with Diamond Color */}
         <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 2, fontSize: '0.8rem' }}>
           <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/'}>Home</Box><br />
           <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/about'}>About Us</Box><br />
@@ -484,21 +480,19 @@ function ContactUs() {
       
       {/* Column 3 - OUR POLICIES */}
       <Grid item xs={12} sm={6} md={3}>
-        {/* Heading with Gold Color */}
         <Typography 
           variant="h6" 
           sx={{ 
             fontWeight: 600, 
             mb: 1, 
             fontSize: '1rem', 
-            color: '#d4af37',  // Changed to gold
+            color: '#d4af37',
             letterSpacing: '1px'
           }}
         >
           OUR POLICIES
         </Typography>
         
-        {/* Line Image below heading */}
         <Box
           component="img"
           src="/images/line.webp"
@@ -511,7 +505,6 @@ function ContactUs() {
           }}
         />
         
-        {/* Links with Diamond Color */}
         <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 2, fontSize: '0.8rem' }}>
           <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/terms'}>Terms and Conditions</Box><br />
           <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = '/privacy'}>Privacy Policy</Box><br />
@@ -522,23 +515,21 @@ function ContactUs() {
         </Typography>
       </Grid>
       
-      {/* Column 4 - REACH US */}
+      {/* Column 4 - REACH US - Updated Information */}
       <Grid item xs={12} sm={6} md={3}>
-        {/* Heading with Gold Color */}
         <Typography 
           variant="h6" 
           sx={{ 
             fontWeight: 600, 
             mb: 1, 
             fontSize: '1rem', 
-            color: '#d4af37',  // Changed to gold
+            color: '#d4af37',
             letterSpacing: '1px'
           }}
         >
           REACH US
         </Typography>
         
-        {/* Line Image below heading */}
         <Box
           component="img"
           src="/images/line.webp"
@@ -551,21 +542,41 @@ function ContactUs() {
           }}
         />
         
-        {/* Text with Diamond Color */}
+        {/* Address */}
         <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 1.8, fontSize: '0.8rem', mb: 2 }}>
-          Diamond Talkies Road, Opp. PCR Complex,<br />
-          Chintamani - 563 125, Karnataka, India.
+          📍 71, 12th Cross Rd, 2nd Stage,<br />
+          Mahalakshmi Layout,<br />
+          Bengaluru, Karnataka – 560086
         </Typography>
+        
+        {/* Phone */}
         <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 1.8, fontSize: '0.8rem', mb: 1 }}>
-          <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = 'tel:+918154252379'}>
-            +91 81542 52379, 99454 30961.
+          📞 <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = 'tel:+918277181308'}>
+            +91 8277181308
+          </Box><br />
+          📞 <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = 'tel:+917090850000'}>
+            +91 7090850000
           </Box>
         </Typography>
-        <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 1.8, fontSize: '0.8rem' }}>
-          <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = 'mailto:namasrinivasajewellers@gmail.com'}>
-            namasrinivasajewellers@gmail.com
+        
+        {/* Email */}
+        <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 1.8, fontSize: '0.8rem', mb: 1 }}>
+          📧 <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.location.href = 'mailto:sales@sagarjewels.in'}>
+            sales@sagarjewels.in
           </Box>
         </Typography>
+        
+        {/* Website */}
+        <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 1.8, fontSize: '0.8rem', mb: 1 }}>
+          🌐 <Box component="span" sx={{ cursor: 'pointer', '&:hover': { color: '#d4af37' } }} onClick={() => window.open('https://sagarjewels.in', '_blank')}>
+            sagarjewels.in
+          </Box>
+        </Typography>
+        
+        {/* Store Timings
+        <Typography variant="body2" sx={{ color: '#b8b8b8', lineHeight: 1.8, fontSize: '0.8rem', mt: 2 }}>
+          🕒 Monday – Sunday: 10:00 AM – 9:00 PM
+        </Typography> */}
       </Grid>
     </Grid>
     
